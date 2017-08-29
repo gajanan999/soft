@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.billdiary.utility.Constants;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -50,8 +52,8 @@ public class LoginController {
 	                ResultSet r1=null;
 	                String g=null;
 	                try {
-						Class.forName("org.hsqldb.jdbc.JDBCDriver");
-						 connection = DriverManager.getConnection("jdbc:hsqldb:billdiarydb", "gajanan", "gajanan");
+						Class.forName(Constants.DB_DRIVER);
+						 connection = DriverManager.getConnection(Constants.DB_URL,Constants.DB_USERNAME,Constants.DB_PASSWORD);
 		        		 st = connection.prepareStatement("select * from user");
 		        		 r1=st.executeQuery();
 		        		 while(r1.next())

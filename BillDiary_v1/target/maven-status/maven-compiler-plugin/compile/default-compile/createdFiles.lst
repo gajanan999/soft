@@ -3,4 +3,5 @@ com\billdiary\ui\LoginController$1.class
 com\billdiary\ui\MainController.class
 com\billdiary\dao\CreateSchema.class
 com\billdiary\ui\LoginController.class
+com\billdiary\utility\Constants.class
 com\billdiary\utility\GeneralUitilies.class
